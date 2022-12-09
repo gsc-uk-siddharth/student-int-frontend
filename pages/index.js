@@ -7,32 +7,37 @@ import CountryCards from "../components/CountryCards";
 import { createClient } from "next-sanity";
 import Gbtn from "../components/Gbtn";
 import Articles from "../components/Articles";
+import UniversityCards from "../components/UniversityCards";
 
-export default function Home({ courses, destinations, schools, articles }) {
+export default function Home({
+  courses,
+  destinations,
+  schools,
+  articles,
+  universities,
+}) {
   return (
     <>
-      <Head>
-        <div className="main text-red-500"></div>
-        <Gbtn />
-      </Head>
       <CarouselItem />
       <SearchBox
         schools={schools}
         destinations={destinations}
         courses={courses}
       />
-      <hr class="my-1 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
-      <div className="mb-4 text-3xl underline lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+      <hr className="my-1 mx-auto w-48 h-1 bg-gray-100 rounded border-0  dark:bg-gray-700"></hr>
+      <div className="m-4 pt-4 text-gray-900 text-3xl text-center tracking-tight font-extrabold underline dark:text-white">
         Unsure what to study
       </div>
       <Cards schools={schools} />
-      <hr class="my-1 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
+      <hr className="hidden md:block my-1 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
       <Articles articles={articles} />
-      <hr class="my-1 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
-      <div className="mb-4 text-3xl underline lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+      <hr className="hidden md:block my-1 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700"></hr>
+      <div className="m-2 p-2 text-3xl text-center text-gray-900 underline lg:text-4xl tracking-tight font-extrabold  dark:text-white">
         Unsure where to study
       </div>
       <CountryCards destinations={destinations} />
+      <hr className="hidden md:block mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-5 dark:bg-gray-700"></hr>
+      <UniversityCards universities={universities} />
     </>
   );
 }
@@ -49,6 +54,7 @@ export async function getStaticProps() {
   const destinations = await client.fetch(`*[_type == "destination"]`);
   const schools = await client.fetch(`*[_type == "schools"]`);
   const articles = await client.fetch(`*[_type == "blogs"]`);
+  const universities = await client.fetch(`*[_type == "university"]`);
 
   return {
     props: {
@@ -56,6 +62,7 @@ export async function getStaticProps() {
       destinations,
       schools,
       articles,
+      universities,
     },
   };
 }

@@ -1,38 +1,11 @@
 import React from "react";
 import PortableText from "react-portable-text";
-// import { PortableText } from "@portabletext/react";
 import { createClient } from "next-sanity";
-
-// // `components` object you'll pass to PortableText
-// const components = {
-//   block: {
-//     // Ex. 1: customizing common block types
-//     h1: ({ children }) => (
-//       <h1 className="pt-20 py-10 mt-20 font-bold text-5xl">{children}</h1>
-//     ),
-//     p: ({ children }) => <p className="p-2 text-xl">{children}</p>,
-//     blockquote: ({ children }) => (
-//       <blockquote className="border-l-purple-500">{children}</blockquote>
-//     ),
-//     image: ({ value }) => <img src={value.imageUrl} />,
-//     callToAction: ({ value, isInline }) =>
-//       isInline ? (
-//         <a href={value.url}>{value.text}</a>
-//       ) : (
-//         <div className="callToAction">{value.text}</div>
-//       ),
-
-//     // Ex. 2: rendering custom styles
-//     customHeading: ({ children }) => (
-//       <h2 className="text-lg text-primary text-purple-700">{children}</h2>
-//     ),
-//   },
-// };
 
 const Post = ({ blog }) => {
   return (
     <>
-      <div className="pt-20 mt-20">
+      <div className="pt-20 mt-10">
         <PortableText
           // Pass in block content straight from Sanity.io
           content={blog.content}
@@ -43,42 +16,50 @@ const Post = ({ blog }) => {
           serializers={{
             h1: (props) => (
               <h1
-                className="font-bold text-5xl text-center text-blue-600"
+                className="font-bold py-4 px-4 pl-1 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20   text-3xl text-justify "
                 {...props}
               />
             ),
             h2: (props) => (
               <h2
-                className="font-bold text-3xl text-center font-mono underline py-4"
+                className="font-bold p-2 pl-2 px-2 lg:ml-20 lg:pl-20  xl:pl-20 xl:ml-20 xl:px-20   py-4 text-3xl text-justify font-mono  "
                 {...props}
               />
             ),
             h3: (props) => (
               <h3
-                className="font-bold text-center text-2xl py-4 font-serif"
+                className="font-bold  pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20    text-justify text-2xl  font-serif"
                 {...props}
               />
             ),
             h4: (props) => (
               <h4
-                className="font-bold text-center text-2xl font-serif"
+                className="font-bold pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20   text-justify text-2xl font-serif "
+                {...props}
+              />
+            ),
+            h5: (props) => (
+              <h5
+                className="font-bold pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20   text-justify text-2xl font-serif "
                 {...props}
               />
             ),
 
             ul: ({ children }) => (
-              <ul className=" list-disc flex justify-center items-center py-4 flex-col px-20 ml-20 mx-20">
+              <ul className=" list-disc pl-2 px-2 flex lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20  lg:px-20 justify-start items-start py-2 flex-col">
                 {children}
               </ul>
             ),
-            li: ({ children }) => <li className=" list-disc">{children}</li>,
+            li: ({ children }) => (
+              <li className="ml-5 list-disc text-lg">{children}</li>
+            ),
             normal: ({ children }) => (
-              <p className="text-xl p-4 px-20 mx-20 py-2 text-center  justify-center">
+              <p className="text-xl px-2 py-2 text-justify lg:pl-10 lg:ml-20 lg:px-20 xl:pl-20 xl:ml-20 xl:px-20 xl:p-4 justify-center">
                 {children}
               </p>
             ),
-            marks: ({ children }) => (
-              <strong className="text-xl text-center">{children}</strong>
+            strong: ({ children }) => (
+              <strong className="text-3xl text-justify">{children}</strong>
             ),
 
             bullet: ({ children }) => (
@@ -86,18 +67,13 @@ const Post = ({ blog }) => {
             ),
 
             div: ({ children }) => (
-              <ul className="flex justify-center items-center">{children}</ul>
+              <ul className="flex justify-center items-center ">{children}</ul>
             ),
           }}
         />
       </div>
     </>
   );
-  // return (
-  //   <>
-  //     <PortableText value={blog.content} components={components} />
-  //   </>
-  // );
 };
 
 export default Post;

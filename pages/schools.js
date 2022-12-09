@@ -19,10 +19,13 @@ export default function Schools({ schools }) {
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
             {schools.map((school) => (
-              <Link href={`/schools/${school.slug.current}`}>
+              <Link
+                href={`/schools/${school.slug.current}`}
+                key={`${school._id}`}
+              >
                 <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <div className="flex justify-between items-center mb-5 text-gray-500">
-                    <span className="bg-primary-600 uppercase font-bold text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                    <span className="bg-primary-600 uppercase font-bold text-white text-xs  inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
                       {/* <svg
                       className="mr-1 w-3 h-3"
                       fill="currentColor"
@@ -38,13 +41,10 @@ export default function Schools({ schools }) {
                   </span> */}
                   </div>
                   <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    <a href="#">{school.name}</a>
+                    <Link href="#">{school.name}</Link>
                   </h2>
                   <p className="mb-5 font-light text-gray-500 dark:text-gray-400">
-                    Static websites are now used to bootstrap lots of websites
-                    and are becoming the basis for a variety of tools that even
-                    influence both web designers and developers influence both
-                    web designers and developers.
+                    {school.description}
                   </p>
                   <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-4">
@@ -57,7 +57,7 @@ export default function Schools({ schools }) {
                       Jese Leos
                     </span> */}
                     </div>
-                    <a
+                    <Link
                       href="#"
                       className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
                     >
@@ -74,13 +74,16 @@ export default function Schools({ schools }) {
                           clipRule="evenodd"
                         />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </article>
               </Link>
             ))}
           </div>
         </div>
+        <p className="font-light pb-8 text-2xl underline hover:font-bold transition-all lg:text-2xl text-blue-500 text-center sm:text-xl dark:text-blue-600">
+          <Link href="/courses"> BROWSE COURSES</Link>
+        </p>
       </section>
     </>
   );

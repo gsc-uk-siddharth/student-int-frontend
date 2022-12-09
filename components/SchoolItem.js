@@ -25,7 +25,7 @@ const SchoolItem = ({ schools, schoolSearch }) => {
         });
 
   return (
-    <div className="px-3 py-3">
+    <div className="px-3 py-3 hidden lg:block">
       <Combobox
         value={selectedPerson}
         onChange={setSelectedPerson}
@@ -33,7 +33,7 @@ const SchoolItem = ({ schools, schoolSearch }) => {
         id="combobox"
       >
         <div className="relative mt-1">
-          <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+          <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-gray-900 text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm dark:text-gray-900">
             <Combobox.Input
               onChange={function (event) {
                 setQuery(event.target.value);
@@ -49,7 +49,7 @@ const SchoolItem = ({ schools, schoolSearch }) => {
           </div>
           <Transition
             as={Fragment}
-            leave="transition ease-in duration-100"
+            leave="transition ease-in duration-800"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}

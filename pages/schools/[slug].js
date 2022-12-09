@@ -1,39 +1,13 @@
 import React from "react";
 import PortableText from "react-portable-text";
-// import { PortableText } from "@portabletext/react";
 import { createClient } from "next-sanity";
-
-// // `components` object you'll pass to PortableText
-// const components = {
-//   block: {
-//     // Ex. 1: customizing common block types
-//     h1: ({ children }) => (
-//       <h1 className="pt-20 py-10 mt-20 font-bold text-5xl">{children}</h1>
-//     ),
-//     p: ({ children }) => <p className="p-2 text-xl">{children}</p>,
-//     blockquote: ({ children }) => (
-//       <blockquote className="border-l-purple-500">{children}</blockquote>
-//     ),
-//     image: ({ value }) => <img src={value.imageUrl} />,
-//     callToAction: ({ value, isInline }) =>
-//       isInline ? (
-//         <a href={value.url}>{value.text}</a>
-//       ) : (
-//         <div className="callToAction">{value.text}</div>
-//       ),
-
-//     // Ex. 2: rendering custom styles
-//     customHeading: ({ children }) => (
-//       <h2 className="text-lg text-primary text-purple-700">{children}</h2>
-//     ),
-//   },
-// };
+import Link from "next/link";
 
 const Schools = ({ school }) => {
   return (
     <>
-      <div className="pt-20 mt-20">
-        <h5 className="mb-2 text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+      <div className="pt-20 mt-20 ">
+        <h5 className="mb-2 ml-4  text-2xl md:text-3xl lg:text-gray-900 lg:pl-20 lg:ml-20 text-justify font-bold tracking-tight text-gray-900 dark:lg:text-white  dark:text-white">
           {school.name}
         </h5>
         <PortableText
@@ -46,46 +20,56 @@ const Schools = ({ school }) => {
           serializers={{
             h1: (props) => (
               <h1
-                className="font-bold text-5xl text-center text-blue-600"
+                className="font-bold  ml-4 pl-4 lg:pl-20 lg:ml-20   text-xl text-justify text-blue-600"
                 {...props}
               />
             ),
             h2: (props) => (
               <h2
-                className="font-bold text-3xl text-center font-mono underline py-4"
+                className="font-bold ml-4  text-xl lg:pl-20 lg:ml-20  text-justify font-mono   "
                 {...props}
               />
             ),
             h3: (props) => (
               <h3
-                className="font-bold text-center text-2xl py-4 font-serif"
+                className="font-bold ml-4lg:pl-20 lg:ml-20   text-justify text-2xl py-4 font-serif "
                 {...props}
               />
             ),
             h4: (props) => (
               <h4
-                className="font-bold text-center text-2xl font-serif"
+                className="font-bold ml-4 lg:pl-20 lg:ml-20  text-justify text-2xl font-serif  "
+                {...props}
+              />
+            ),
+            h5: (props) => (
+              <h5
+                className="font-bold px-4 lg:pl-20 lg:ml-202xl:pl-96  text-justify text-2xl font-serif  "
                 {...props}
               />
             ),
 
             ul: ({ children }) => (
-              <ul className=" list-disc flex justify-center items-center py-4 flex-col px-20 ml-20 mx-20">
+              <ul className=" list-disc ml-4 pl-4 lg:pl-20lg:ml-20 lg:px-20 lg:mx-20 flex justify-start items-start py-4 flex-col">
                 {children}
               </ul>
             ),
-            li: ({ children }) => <li className=" list-disc">{children}</li>,
+            li: ({ children }) => (
+              <li className=" list-disc text-lg ">{children}</li>
+            ),
             normal: ({ children }) => (
-              <p className="text-xl p-4 px-20 mx-20 py-2 text-center  justify-center">
+              <p className="text-xl px-4 py-2 lg:pl-20 lg:ml-20 lg:px-20 lg:mx-20  text-justify  justify-center">
                 {children}
               </p>
             ),
             marks: ({ children }) => (
-              <strong className="text-xl text-center">{children}</strong>
+              <strong className="text-xl px-4  text-justify text-primary-700">
+                {children}
+              </strong>
             ),
 
             bullet: ({ children }) => (
-              <ul className="mt-xl list-disc">{children}</ul>
+              <ul className="mt-xl list-disc ">{children}</ul>
             ),
 
             div: ({ children }) => (
@@ -94,6 +78,22 @@ const Schools = ({ school }) => {
           }}
         />
       </div>
+      <section className="text-white">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+          <div className="mx-auto max-w-screen-sm text-center">
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-white dark:text-white">
+              Looks Nice?
+            </h2>
+            <Link href={"https://notionforms.io/forms/student-integration"}>
+              <button className="relative md:text-2xl inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                <span className="relative text-2xl px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  Lets Connect ↗️
+                </span>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
   // return (
@@ -103,7 +103,7 @@ const Schools = ({ school }) => {
   // );
 };
 
-export default Post;
+export default Schools;
 
 export const getServerSideProps = async (context) => {
   const { slug } = context.query;

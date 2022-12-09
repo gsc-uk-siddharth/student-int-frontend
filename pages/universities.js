@@ -33,10 +33,13 @@ export default function Home({ universities }) {
           </div>
           <div className="grid gap-8 lg:grid-cols-2">
             {universities.map((university) => (
-              <Link href={`/university/${university.slug.current}`}>
+              <Link
+                href={`/university/${university.slug.current}`}
+                key={`${university._id}`}
+              >
                 <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                   <div className="flex justify-between items-center mb-5 text-gray-500">
-                    <span className="bg-primary-600 uppercase font-bold text-white text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+                    <span className="bg-primary-600 uppercase font-bold text-white text-xs  inline-flex items-center px-2.5 py-0.5 rounded dark:bg-neutral-200 dark:text-neutral-800">
                       {/* <svg
                       className="mr-1 w-3 h-3"
                       fill="currentColor"
@@ -57,10 +60,11 @@ export default function Home({ universities }) {
                       width={400}
                       height={400}
                       className="p-3  hover:opacity-50 cursor-pointer hover:rounded-xl"
+                      alt=""
                     />
                   </div>
                   <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    <a href="#">{university.name}</a>
+                    <Link href="#">{university.name}</Link>
                   </h2>
                   <p className="mb-5 font-light text-gray-500 dark:text-gray-400">
                     Static websites are now used to bootstrap lots of websites
@@ -79,9 +83,9 @@ export default function Home({ universities }) {
                       Jese Leos
                     </span> */}
                     </div>
-                    <a
+                    <Link
                       href="#"
-                      className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                      className="inline-flex items-center font-medium text-primary-600 dark:text-neutral-500 hover:underline"
                     >
                       Read more
                       <svg
@@ -96,7 +100,7 @@ export default function Home({ universities }) {
                           clipRule="evenodd"
                         />
                       </svg>
-                    </a>
+                    </Link>
                   </div>
                 </article>
               </Link>

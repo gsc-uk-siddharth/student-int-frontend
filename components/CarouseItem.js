@@ -15,7 +15,7 @@ const CarouselItem = () => {
           height: "100%",
         }}
       ></div> */}
-      <div className=" sm:block md:block lg:block xl:block 2xl:block">
+      <div className="mt-10 pt-10 md:mt-8 md:pt-8 lg:mt-6 lg:pt-6 xl:mt-3 xl:pt-3">
         <Carousel
           showThumbs={false}
           interval={3000}
@@ -25,13 +25,29 @@ const CarouselItem = () => {
           showArrows={false}
         >
           <div>
-            <img src="/images/1.svg" alt="image1" />
+            <Image
+              src="/images/1.min.svg"
+              alt="image1"
+              width={100}
+              height={100}
+              className=""
+            />
           </div>
           <div>
-            <img src="/images/2.svg" alt="image2" />
+            <Image
+              src="/images/2.min.svg"
+              alt="image2"
+              width={100}
+              height={100}
+            />
           </div>
           <div>
-            <img src="/images/3.svg" alt="image3" />
+            <Image
+              src="/images/3.min.svg"
+              alt="image3"
+              width={100}
+              height={100}
+            />
           </div>
         </Carousel>
       </div>
