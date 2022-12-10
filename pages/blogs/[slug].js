@@ -16,58 +16,89 @@ const Post = ({ blog }) => {
           serializers={{
             h1: (props) => (
               <h1
-                className="font-bold py-4 px-4 pl-1 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20   text-3xl text-justify "
+                className="font-bold py-4 px-4 pl-1 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20 underline  text-3xl text-justify  "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h2: (props) => (
               <h2
-                className="font-bold p-2 pl-2 px-2 lg:ml-20 lg:pl-20  xl:pl-20 xl:ml-20 xl:px-20   py-4 text-3xl text-justify font-mono  "
+                className="font-bold p-2 pl-2 px-2 lg:ml-20 lg:pl-20  xl:pl-20 xl:ml-20 xl:px-20 underline  py-4 text-3xl text-justify font-mono  "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h3: (props) => (
               <h3
-                className="font-bold  pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20    text-justify text-2xl  font-serif"
+                className="font-bold  pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20  underline  text-justify text-2xl  font-serif"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h4: (props) => (
               <h4
-                className="font-bold pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20   text-justify text-2xl font-serif "
+                className="font-bold pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20 underline  text-justify text-2xl font-serif "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h5: (props) => (
               <h5
-                className="font-bold pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20   text-justify text-2xl font-serif "
+                className="font-bold pl-2 py-2 px-2 lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20 underline  text-justify text-2xl font-serif "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
 
             ul: ({ children }) => (
-              <ul className=" list-disc pl-2 px-2 flex lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20  lg:px-20 justify-start items-start py-2 flex-col">
+              <ul
+                className=" list-disc pl-2 px-2 flex lg:ml-20 lg:pl-20 xl:pl-20 xl:ml-20 xl:px-20  lg:px-20 lg:text-2xl justify-start items-start py-2 flex-col"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </ul>
             ),
             li: ({ children }) => (
-              <li className="ml-5 list-disc text-lg">{children}</li>
+              <li
+                className="ml-5 list-disc text-lg lg:text-2xl"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </li>
             ),
             normal: ({ children }) => (
-              <p className="text-xl px-2 py-2 text-justify lg:pl-10 lg:ml-20 lg:px-20 xl:pl-20 xl:ml-20 xl:px-20 xl:p-4 justify-center">
+              <p
+                className="text-xl px-2 py-2 text-justify lg:pl-10 lg:ml-20 lg:px-20 lg:mx-20 lg:text-2xl xl:pl-20 xl:ml-20 xl:px-20 xl:p-4 justify-center"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </p>
             ),
             strong: ({ children }) => (
-              <strong className="text-3xl text-justify">{children}</strong>
+              <strong
+                className="text-3xl text-justify underline"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </strong>
             ),
 
             bullet: ({ children }) => (
-              <ul className="mt-xl list-disc">{children}</ul>
+              <ul
+                className="mt-xl list-disc"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </ul>
             ),
 
             div: ({ children }) => (
-              <ul className="flex justify-center items-center ">{children}</ul>
+              <ul
+                className="flex justify-center items-center "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </ul>
             ),
           }}
         />

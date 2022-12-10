@@ -10,10 +10,11 @@ const Navbar = () => {
     <nav className=" fixed top-0 z-10 bg-blend-color bg-gray-50 backdrop-blur-sm text-white w-full border-b-2 border-gray-900  dark:border-gray-600 dark:bg-gray-900 ">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <Link href="/" className="flex items-center">
-          <Image
+          <img
             src="/images/si-logo.png"
             className="  h-20 w-50 object-cover dark:invert"
             alt="Student Integration Logo"
+            // width={50}
           />
         </Link>
         <button

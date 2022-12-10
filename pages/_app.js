@@ -4,6 +4,7 @@ import React from "react";
 
 import "../styles/globals.css";
 import Script from "next/script";
+import gid from "../googleTrackingId";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
@@ -16,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       {/* {!loading ? ( */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-PMFED7B8PC"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gid}`}
       />
       <Script
         id="google-analytics"
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps }) {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-PMFED7B8PC', {
+      gtag('config', '${gid}', {
       page_path: window.location.pathname,
       });
       `,

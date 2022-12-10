@@ -15,11 +15,12 @@ function Footer() {
           <ul className="">
             <p className="text-gray-800 font-bold text-3xl pb-6">
               <span>
-                <Image
+                <img
                   // src="https://flowbite.com/docs/images/logo.svg"
                   src="/images/si-logo.png"
                   className=" h-20 w-50 object-cover"
                   alt="Student Integration Logo"
+                  // width={50}
                 />
               </span>
               {/* <span className="text-primary-600">S</span>tudent

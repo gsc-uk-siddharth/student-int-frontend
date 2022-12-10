@@ -48,36 +48,44 @@ const Post = ({ university, course }) => {
             h1: (props) => (
               <h1
                 className="font-bold ml-2 pl-2 lg:ml-20 lg:pl-20  py-4 text-5xl text-justify "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h2: (props) => (
               <h2
                 className="font-bold p-4 pl-2 lg:ml-20 lg:pl-20  py-4 text-3xl text-justify   "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h3: (props) => (
               <h3
                 className="font-bold  pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl  font-serif"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h4: (props) => (
               <h4
                 className="font-bold pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl font-serif "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h5: (props) => (
               <h5
                 className="font-bold pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl font-serif "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
 
             ul: ({ children }) => (
-              <ul className=" list-disc ml-2 pl-2 px-2 lg:ml-20 lg:pl-20 flex justify-start items-start py-4 flex-col">
+              <ul
+                className=" list-disc ml-2 pl-2 px-2 lg:ml-20 lg:pl-20 flex justify-start items-start py-4 flex-col"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </ul>
             ),
@@ -85,7 +93,10 @@ const Post = ({ university, course }) => {
               <li className="ml-5 list-disc text-lg">{children}</li>
             ),
             normal: ({ children }) => (
-              <p className="text-xl  px-2 py-2 text-justify  justify-center lg:px-20 lg:mx-20 ">
+              <p
+                className="text-xl  px-2 py-2 text-justify  justify-center lg:px-20 lg:mx-20 "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </p>
             ),
@@ -94,11 +105,21 @@ const Post = ({ university, course }) => {
             ),
 
             bullet: ({ children }) => (
-              <ul className="mt-xl list-disc">{children}</ul>
+              <ul
+                className="mt-xl list-disc"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </ul>
             ),
 
             div: ({ children }) => (
-              <ul className="flex justify-center items-center">{children}</ul>
+              <ul
+                className="flex justify-center items-center"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </ul>
             ),
           }}
         />
@@ -111,7 +132,7 @@ const Post = ({ university, course }) => {
               <Link href={"https://notionforms.io/forms/student-integration"}>
                 <button className="relative md:text-2xl inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white dark:xl:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                   <span className="relative text-2xl px-5 py-2.5 transition-all ease-in duration-75  dark:bg-gray-900 dark:text-white rounded-md group-hover:bg-opacity-0">
-                    Lets Connect ↗️
+                    APPLY NOW
                   </span>
                 </button>
               </Link>

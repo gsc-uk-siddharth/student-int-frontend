@@ -7,7 +7,10 @@ const Schools = ({ school }) => {
   return (
     <>
       <div className="pt-20 mt-20 ">
-        <h5 className="mb-2 ml-4  text-2xl md:text-3xl lg:text-gray-900 lg:pl-20 lg:ml-20 text-justify font-bold tracking-tight text-gray-900 dark:lg:text-white  dark:text-white">
+        <h5
+          className="mb-2 ml-4  text-2xl md:text-3xl lg:text-gray-900 lg:pl-20 lg:ml-20 text-justify font-bold tracking-tight text-gray-900 dark:lg:text-white  dark:text-white underline "
+          style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+        >
           {school.name}
         </h5>
         <PortableText
@@ -50,15 +53,26 @@ const Schools = ({ school }) => {
             ),
 
             ul: ({ children }) => (
-              <ul className=" list-disc ml-4 pl-4 lg:pl-20lg:ml-20 lg:px-20 lg:mx-20 flex justify-start items-start py-4 flex-col">
+              <ul
+                className=" list-disc ml-4 pl-4 lg:pl-20lg:ml-20 lg:px-20 lg:mx-20 flex justify-start items-start py-4 flex-col"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </ul>
             ),
             li: ({ children }) => (
-              <li className=" list-disc text-lg ">{children}</li>
+              <li
+                className=" list-disc text-lg "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </li>
             ),
             normal: ({ children }) => (
-              <p className="text-xl px-4 py-2 lg:pl-20 lg:ml-20 lg:px-20 lg:mx-20  text-justify  justify-center">
+              <p
+                className="text-xl px-4 py-2 lg:pl-20 lg:ml-20 lg:px-20 lg:mx-20 lg:text-2xl text-justify  justify-center"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </p>
             ),
@@ -69,11 +83,21 @@ const Schools = ({ school }) => {
             ),
 
             bullet: ({ children }) => (
-              <ul className="mt-xl list-disc ">{children}</ul>
+              <ul
+                className="mt-xl list-disc "
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </ul>
             ),
 
             div: ({ children }) => (
-              <ul className="flex justify-center items-center">{children}</ul>
+              <ul
+                className="flex justify-center items-center"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
+                {children}
+              </ul>
             ),
           }}
         />
@@ -87,7 +111,7 @@ const Schools = ({ school }) => {
             <Link href={"https://notionforms.io/forms/student-integration"}>
               <button className="relative md:text-2xl inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                 <span className="relative text-2xl px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  Lets Connect ↗️
+                  APPLY NOW ↗️
                 </span>
               </button>
             </Link>

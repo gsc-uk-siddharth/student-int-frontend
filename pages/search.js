@@ -72,10 +72,7 @@ export default function Home({ universities, course }) {
                     <Link href="#">{university.name}</Link>
                   </h2>
                   <p className="mb-5 font-light text-gray-500 dark:text-gray-400">
-                    Static websites are now used to bootstrap lots of websites
-                    and are becoming the basis for a variety of tools that even
-                    influence both web designers and developers influence both
-                    web designers and developers.
+                    {university.description}
                   </p>
                   <div className="flex justify-between items-center">
                     <div className="flex items-center space-x-4">
