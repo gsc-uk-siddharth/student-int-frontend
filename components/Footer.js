@@ -33,8 +33,8 @@ function Footer() {
                 {" "}
                 <FaFacebookSquare className="text-4xl cursor-pointer text-primary-600" />
               </Link>
-              <FaInstagram className="text-4xl cursor-pointer text-pink-400" />
-              <FaTwitter className="text-4xl cursor-pointer text-primary-500" />
+              {/* <FaInstagram className="text-4xl cursor-pointer text-pink-400" />
+              <FaTwitter className="text-4xl cursor-pointer text-primary-500" /> */}
               <Link
                 href={"https://www.linkedin.com/company/student-integration"}
               >

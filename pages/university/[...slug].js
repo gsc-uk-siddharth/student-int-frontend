@@ -34,8 +34,11 @@ const Post = ({ university, course }) => {
         />
         <CourseInfo course={course} university={university} />
 
-        <div className="text-center lg:text-justify lg:ml-20 lg:pl-20 underline text-4xl text-primary-400 py-2 font-bold">
-          {university.name}
+        <div
+          className="text-center lg:text-justify lg:ml-20 lg:pl-20  text-4xl  underline py-2 font-bold"
+          style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+        >
+          Why Choose {university.name}?
         </div>
         <PortableText
           // Pass in block content straight from Sanity.io
@@ -47,35 +50,35 @@ const Post = ({ university, course }) => {
           serializers={{
             h1: (props) => (
               <h1
-                className="font-bold ml-2 pl-2 lg:ml-20 lg:pl-20  py-4 text-5xl text-justify "
+                className="font-bold ml-2 pl-2 lg:ml-20 lg:pl-20  py-4 text-5xl text-justify  underline"
                 style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h2: (props) => (
               <h2
-                className="font-bold p-4 pl-2 lg:ml-20 lg:pl-20  py-4 text-3xl text-justify   "
+                className="font-bold p-4 pl-2 lg:ml-20 lg:pl-20  py-4 text-3xl text-justify   underline "
                 style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h3: (props) => (
               <h3
-                className="font-bold  pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl  font-serif"
+                className="font-bold  pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl  font-serif underline"
                 style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h4: (props) => (
               <h4
-                className="font-bold pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl font-serif "
+                className="font-bold pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl font-serif underline "
                 style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h5: (props) => (
               <h5
-                className="font-bold pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl font-serif "
+                className="font-bold pl-2 py-4 lg:ml-20 lg:pl-20 text-justify text-2xl font-serif  underline"
                 style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />

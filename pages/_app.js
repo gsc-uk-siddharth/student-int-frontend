@@ -5,6 +5,7 @@ import React from "react";
 import "../styles/globals.css";
 import Script from "next/script";
 import gid from "../googleTrackingId";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(false);
@@ -33,6 +34,9 @@ function MyApp({ Component, pageProps }) {
       `,
         }}
       />
+      <Head>
+        <title>Student Integration</title>
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
