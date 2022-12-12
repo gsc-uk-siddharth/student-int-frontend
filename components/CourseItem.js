@@ -123,7 +123,7 @@ const CourseItem = ({ courses, courseSearch }) => {
       <Autocomplete
         id="combo-box-demo"
         options={people}
-        sx={{ width: 300, color: "white", background: "black" }}
+        sx={{ width: 300, color: "black", background: "white" }}
         // className={classes.autocomplete}
         onChange={handleChange}
         freeSolo="true"
