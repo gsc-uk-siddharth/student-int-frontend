@@ -87,14 +87,23 @@ function Footer() {
         <div className="p-5">
           <ul>
             <p className="text-gray-800 font-bold text-2xl pb-4">About us</p>
-            <Link href={"https://notionforms.io/forms/student-integration"}>
+            <Link href={"tel:+9189858 90000"}>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-primary-600 cursor-pointer">
-                Contact
+                Contact : +91 89858 90000
               </li>
             </Link>
-            <Link href={"mailto:studyabroad@studentint.com"}>
+            <Link target={"_blank"} href={"mailto:studyabroad@studentint.com"}>
               <li className="text-gray-500 text-md pb-2 font-semibold hover:text-primary-600 cursor-pointer">
                 Ask a Query
+              </li>
+            </Link>
+            <Link
+              target={"_blank"}
+              href={"https://goo.gl/maps/1fbJ5FK7xZttX4hj6"}
+            >
+              <li className="text-gray-500 text-md pb-2 font-semibold hover:text-primary-600 cursor-pointer ">
+                Find us: H-1070 Solitaire Business Hub,
+                <br /> Viman Nagar, Pune
               </li>
             </Link>
             {/* <Link href="/apply">
