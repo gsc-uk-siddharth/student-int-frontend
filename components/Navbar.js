@@ -5,9 +5,15 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
-  const [dropDownState, setdropDownState] = useState("block");
+  const [isDropdownVisible, setDropdownVisibility] = useState(false);
+
+  console.log(isDropdownVisible);
   return (
-    <nav className=" fixed top-0 z-10 bg-blend-color bg-gray-50 backdrop-blur-sm text-white w-full border-b-2 border-gray-900  dark:border-gray-600 dark:bg-gray-900 ">
+    <nav
+      className=" fixed top-0 z-10 bg-blend-color bg-gray-50 backdrop-blur-sm text-white w-full border-b-2 border-gray-900  dark:border-gray-600 dark:bg-gray-900 "
+      onMouseEnter={() => setDropdownVisibility(true)}
+      onMouseLeave={() => setDropdownVisibility(false)}
+    >
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <Link href="/" className="flex items-center">
           <img
@@ -48,7 +54,7 @@ const Navbar = () => {
               <button
                 id="mega-menu-full-dropdown-button"
                 data-collapse-toggle="mega-menu-full-dropdown"
-                className="text-sm md:text-xl flex justify-between text-black items-center py-2 pr-4 pl-3 focus:text-blue-600 w-full font-medium  border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-gray-400 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                className="text-sm md:text-xl flex justify-between text-black items-center py-2 pr-4 pl-3 focus:text-gray-600 w-full font-medium  border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-gray-600 md:p-0 dark:text-gray-400 md:dark:hover:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-500 md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Get Advice{" "}
                 <svg
@@ -143,116 +149,118 @@ const Navbar = () => {
       <div
         id="mega-menu-full-dropdown"
         className={
-          "mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 hidden"
+          "mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600 "
         }
       >
-        <div className="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
-          <ul aria-labelledby="mega-menu-full-dropdown-button">
-            <li>
-              <Link
-                href="/blogs/cost-of-studying-abroad"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-blue-700"
-              >
-                <div className="font-semibold">Cost of Studying Abroad</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Find the cost of studying at your desired destination
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blogs/financial-assistance-for-higher-education-in-the-uk"
-                className="block p-3 rounded-lg  hover:bg-gray-200  focus:text-blue-600  dark:hover:bg-blue-700"
-              >
-                <div className="font-semibold">Funding Guides</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Funding guides which can answer all your financial queries
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/blogs/scholarships-for-indian-students-looking-to-study-in-australia"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold">Find Scholarships</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  All about Scholarships and how to bang one
-                </span>
-              </Link>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <Link
-                href="/blogs"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold">Study Abroad Articles</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Articles which will help you Study Abroad
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/schools"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold">Subject Guides</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Guides which will help you choose your subject of interest
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/courses"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold">Browse All Courses</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Step by step guidance for your journey abroad
-                </span>
-              </Link>
-            </li>
-          </ul>
-          <ul className="hidden md:block">
-            <li>
-              <Link
-                href="/courses"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold">Browse All Subjects</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Find about all the subjects offered
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/destinations"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold"> Browse All Destinations</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Get to know everything about your countries of interest
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://notionforms.io/forms/student-integration"
-                className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
-              >
-                <div className="font-semibold">Contact Us</div>
-                <span className="text-sm font-light text-gray-500 dark:text-gray-400">
-                  Feel free to contact us for any assistance
-                </span>
-              </Link>
-            </li>
-          </ul>
-        </div>
+        {isDropdownVisible && (
+          <div className="grid py-5 px-4 mx-auto max-w-screen-xl text-gray-900 dark:text-white sm:grid-cols-2 md:grid-cols-3 md:px-6">
+            <ul>
+              <li>
+                <Link
+                  href="/blogs/cost-of-studying-abroad"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-gray-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Cost of Studying Abroad</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Find the cost of studying at your desired destination
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs/financial-assistance-for-higher-education-in-the-uk"
+                  className="block p-3 rounded-lg  hover:bg-gray-200  focus:text-gray-600  dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Funding Guides</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Funding guides which can answer all your financial queries
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blogs/scholarships-for-indian-students-looking-to-study-in-australia"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Find Scholarships</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    All about Scholarships and how to bang one
+                  </span>
+                </Link>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <Link
+                  href="/blogs"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Study Abroad Articles</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Articles which will help you Study Abroad
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/schools"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Subject Guides</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Guides which will help you choose your subject of interest
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/courses"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Browse All Courses</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Step by step guidance for your journey abroad
+                  </span>
+                </Link>
+              </li>
+            </ul>
+            <ul className="hidden md:block">
+              <li>
+                <Link
+                  href="/courses"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Browse All Subjects</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Find about all the subjects offered
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/destinations"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold"> Browse All Destinations</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Get to know everything about your countries of interest
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://notionforms.io/forms/student-integration"
+                  className="block p-3 rounded-lg hover:bg-gray-200  focus:text-blue-600 dark:hover:bg-gray-700"
+                >
+                  <div className="font-semibold">Contact Us</div>
+                  <span className="text-sm font-light text-gray-500 dark:text-gray-400">
+                    Feel free to contact us for any assistance
+                  </span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
       <Script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></Script>
     </nav>
