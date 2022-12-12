@@ -119,11 +119,11 @@ const CourseItem = ({ courses, courseSearch }) => {
     //   </Combobox>
     // </div>
 
-    <div className="px-3 py-3  lg:block">
+    <div className="px-3 py-3  lg:block dark:text-white">
       <Autocomplete
         id="combo-box-demo"
         options={people}
-        sx={{ width: 400 }}
+        sx={{ width: 300 }}
         // className={classes.autocomplete}
         onChange={handleChange}
         freeSolo="true"

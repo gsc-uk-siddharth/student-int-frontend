@@ -61,7 +61,7 @@ export default function Home({ articles }) {
                     </span> */}
                     </div>
                     <Link
-                      href="#"
+                      href={`/blogs/${article.slug.current}`}
                       className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
                     >
                       Read more

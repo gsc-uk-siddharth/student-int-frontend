@@ -47,7 +47,7 @@ const SearchBox = ({ schools, destinations, courses }) => {
           type="button"
           // onClick={() => router.push(`/search?school=${school}&destination=${destination}&course=${course}`)}
           onClick={function () {
-            console.log(school, " | ", destination, " | ", course);
+            // console.log(school, " | ", destination, " | ", course);
             if (school != "" || destination != "" || course != "") {
               router.push(`/search?course=${course}`);
               // router.push(

@@ -4,7 +4,7 @@ import { createClient } from "next-sanity";
 import Link from "next/link";
 
 const CourseInfo = ({ course, university }) => {
-  console.log(course[0].name);
+  // console.log(course[0].name);
   return (
     <div className="">
       <h5

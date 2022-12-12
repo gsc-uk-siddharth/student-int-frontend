@@ -81,7 +81,7 @@ export default function Home({ universities }) {
                     </span> */}
                     </div>
                     <Link
-                      href="#"
+                      href={`/university/${university.slug.current}`}
                       className="inline-flex items-center font-medium text-primary-600 dark:text-neutral-500 hover:underline"
                     >
                       Read more

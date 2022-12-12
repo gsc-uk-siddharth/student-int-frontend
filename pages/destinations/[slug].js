@@ -17,7 +17,7 @@ function urlFor(source) {
   return builder.image(source);
 }
 const Destinations = ({ destination }) => {
-  console.log(destination);
+  // console.log(destination);
   return (
     <>
       <div className="pt-20 mt-5">

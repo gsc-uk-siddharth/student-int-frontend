@@ -127,7 +127,7 @@ const DestinationItem = ({ destinations, destinationSearch }) => {
           id="combo-box-demo"
           options={people}
           // className={classes.autocomplete}
-          sx={{ width: 400 }}
+          sx={{ width: 300 }}
           onChange={handleChange}
           freeSolo="true"
           selectOnFocus

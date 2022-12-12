@@ -57,7 +57,7 @@ export default function Home({ destinations }) {
                     </span> */}
                     </div>
                     <Link
-                      href="#"
+                      href={`/destinations/${destination.slug.current}`}
                       className="inline-flex items-center font-medium text-primary-600 dark:text-primary-500 hover:underline"
                     >
                       Read more

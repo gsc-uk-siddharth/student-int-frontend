@@ -18,7 +18,7 @@ function urlFor(source) {
   return builder.image(source);
 }
 const Post = ({ university, course }) => {
-  console.log(university, course);
+  // console.log(university, course);
   return (
     <>
       <div className=" mt-20">
