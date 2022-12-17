@@ -80,7 +80,7 @@ const Course = ({ course }) => {
         }}
         className="mt-10 pt-10 pb-12"
       >
-        <div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
+        <div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:ml-4 lg:grid-cols-12 lg:pt-28">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl text-white font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
               Apply for {course.title} at
@@ -132,11 +132,11 @@ const Course = ({ course }) => {
         </section>
 
 
-        <div className="xl:pl-36 pl-6 lg:text-3xl text-3xl text-white font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
+        <div className="xl:pl-24 lg:ml-4 pl-6 lg:text-3xl text-3xl text-white font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
           About the Course
         </div>
         <div className="py-4">
-          <h5 className=" text-3xl pl-6 xl:pl-36 xl:px-20 font-bold tracking-tight underline text-white dark:text-white">
+          <h5 className="xl:pl-24 lg:ml-4 text-3xl pl-6 mr-4 xl:px-20 font-bold tracking-tight underline text-white dark:text-white">
             {course.name}
           </h5>
 
@@ -150,37 +150,37 @@ const Course = ({ course }) => {
             serializers={{
               h1: (props) => (
                 <h1
-                  className="font-bold pl-6 lg:px-20 lg:mx-20 xl:pl-36 xl:px-20  text-5xl  text-justify  text-white"
+                  className="font-bold pl-6 lg:ml-4 lg:px-20 lg:mx-20 xl:pl-24 xl:px-20  text-5xl  text-justify  text-white"
                   {...props}
                 />
               ),
               h2: (props) => (
                 <h2
-                  className="font-bold pl-6 px-10 xl:pl-36 xl:px-20 text-3xl  text-justify  py-4 text-white underline"
+                  className="font-bold pl-6 lg:ml-4 px-10 xl:pl-24 xl:px-20 text-3xl  text-justify  py-4 text-white underline"
                   {...props}
                 />
               ),
               h3: (props) => (
                 <h3
-                  className="font-bold pl-6 xl:pl-36 xl:px-20  text-justify text-2xl py-4 font-serif text-white underline"
+                  className="font-bold pl-6 lg:ml-4 xl:pl-24 xl:px-20  text-justify text-2xl py-4 font-serif text-white underline"
                   {...props}
                 />
               ),
               h4: (props) => (
                 <h4
-                  className="font-bold pl-6  xl:pl-36 xl:px-20 text-justify text-2xl font-serif text-white underline"
+                  className="font-bold pl-6 lg:ml-4 xl:pl-24 xl:px-20 text-justify text-2xl font-serif text-white underline"
                   {...props}
                 />
               ),
               h5: (props) => (
                 <h5
-                  className="font-bold pl-6  xl:pl-36 xl:px-20 text-justify text-2xl font-serif text-white underline"
+                  className="font-bold pl-6 lg:ml-4 xl:pl-24 xl:px-20 text-justify text-2xl font-serif text-white underline"
                   {...props}
                 />
               ),
 
               ul: ({ children }) => (
-                <ul className=" list-disc pl-6  xl:pl-20 xl:ml-20 xl:px-20  flex justify-start items-start py-4 flex-col text-white">
+                <ul className=" list-disc pl-6 lg:ml-4 xl:pl-24 xl:ml-20 xl:px-20  flex justify-start items-start py-4 flex-col text-white">
                   {children}
                 </ul>
               ),
@@ -190,7 +190,7 @@ const Course = ({ course }) => {
                 </li>
               ),
               normal: ({ children }) => (
-                <p className="text-xl px-6 py-3  lg:mr-20 xl:pl-36 xl:px-20  text-justify text-white font-400 justify-center">
+                <p className="text-xl px-6 py-3 lg:ml-4 xl:mr-20 xl:pl-24 xl:px-20  text-justify text-white font-400 justify-center">
                   {children}
                 </p>
               ),
@@ -213,15 +213,15 @@ const Course = ({ course }) => {
           />
           <Link
             href={`${course.brochureUrl}?dl=course_brochure.pdf`}
-            className="inline-flex items-center justify-center px-20   lg:px-6 xl:px-24 text-bold ml-6 py-3 xl:ml-36 lg:text-2xl text-sm lg:font-light text-center bg-cyan-900 text-white  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-cyan-900 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-20 lg:ml-10 py-3  lg:px-6 xl:px-24 text-bold ml-6  xl:ml-24 lg:text-2xl text-sm lg:font-light text-center bg-cyan-900 text-white  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-cyan-900 dark:focus:ring-gray-800"
           >
             Download Brochure
           </Link>
         </div>
 
-        <div className="max-w-screen-xl w-50 px-4  mx-auto lg:gap-8 xl:gap-0  lg:grid-cols-12 ">
+        <div className="max-w-screen-xl w-50 px-4 lg:mx-6  mx-auto lg:gap-8 xl:gap-0 xl:mx-24  xl:mr-36 lg:grid-cols-12 ">
           <form id="form" onSubmit={handleSubmit}>
-            <h1 className="max-w-2xl mb-4 py-4 text-3xl text-white font-extrabold leading-none tracking-tight md:text-3xl xl:text-4xl dark:text-white">
+            <h1 className="max-w-2xl mb-4 py-4  text-3xl text-white font-extrabold leading-none tracking-tight md:text-3xl xl:text-4xl dark:text-white">
               Apply at your dream university
             </h1>
             <div className="grid md:grid-cols-2 md:gap-6">
@@ -380,7 +380,7 @@ const Course = ({ course }) => {
             <button
               type="submit"
               onClick={loadData}
-              className="inline-flex items-center justify-center text-gray-900 w-full px-6 py-3 font-bold lg:text-2xl text-sm lg:font-light text-center  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              className="inline-flex items-center justify-center  bg-cyan-900 text-white w-full px-6 py-3 font-bold lg:text-2xl text-sm lg:font-light text-center  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
               Submit
 
