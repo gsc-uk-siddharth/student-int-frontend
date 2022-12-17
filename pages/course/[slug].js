@@ -408,7 +408,7 @@ export const getServerSideProps = async (context) => {
     useCdn: false,
   });
 
-  const query = `*[_type == "pages" && slug.current == "master-in-business-administration"][0]
+  const query = `*[_type == "pages" && slug.current == "${slug}"][0]
   {
     ...,
     "brochureUrl": brochure.asset->url
