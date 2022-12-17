@@ -22,30 +22,37 @@ const Courses = ({ course }) => {
             h1: (props) => (
               <h1
                 className="font-bold ml-2 pl-2  xl:pl-20 xl:ml-20 xl:px-20  text-5xl  text-justify text-blue-600"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h2: (props) => (
               <h2
                 className="font-bold ml-2 pl-2  xl:pl-20 xl:ml-20 xl:px-20 text-3xl  text-justify font-mono py-4"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h3: (props) => (
               <h3
                 className="font-bold ml-2 pl-2  xl:pl-20 xl:ml-20 xl:px-20  text-justify text-2xl py-4 font-serif"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
             h4: (props) => (
               <h4
                 className="font-bold ml-2 pl-2  xl:pl-20 xl:ml-20 xl:px-20 text-justify text-2xl font-serif"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
                 {...props}
               />
             ),
 
             ul: ({ children }) => (
-              <ul className=" list-disc ml-2 pl-2  xl:pl-20 xl:ml-20 xl:px-20  flex justify-start items-start py-4 flex-col">
+              <ul
+                className=" list-disc ml-2 pl-2  xl:pl-20 xl:ml-20 xl:px-20  flex justify-start items-start py-4 flex-col"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </ul>
             ),
@@ -53,12 +60,18 @@ const Courses = ({ course }) => {
               <li className="ml-5 list-disc text-lg ">{children}</li>
             ),
             normal: ({ children }) => (
-              <p className="text-xl ml-2 pl-2 px-4  xl:pl-20 xl:ml-20 xl:px-20  text-justify  justify-center">
+              <p
+                className="text-xl ml-2 pl-2 px-4  xl:pl-20 xl:ml-20 xl:px-20  text-justify  justify-center"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </p>
             ),
             marks: ({ children }) => (
-              <strong className="text-xl  xl:pl-20 xl:ml-20 xl:px-20  text-justify">
+              <strong
+                className="text-xl  xl:pl-20 xl:ml-20 xl:px-20  text-justify"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </strong>
             ),
@@ -68,7 +81,10 @@ const Courses = ({ course }) => {
             ),
 
             div: ({ children }) => (
-              <ul className="flex justify-center xl:pl-20 xl:ml-20 xl:px-20  items-center">
+              <ul
+                className="flex justify-center xl:pl-20 xl:ml-20 xl:px-20  items-center"
+                style={{ fontFamily: `Roboto Slab`, fontWeight: `400` }}
+              >
                 {children}
               </ul>
             ),

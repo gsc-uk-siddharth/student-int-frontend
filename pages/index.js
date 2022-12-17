@@ -8,6 +8,9 @@ import { createClient } from "next-sanity";
 import Gbtn from "../components/Gbtn";
 import Articles from "../components/Articles";
 import UniversityCards from "../components/UniversityCards";
+// import { useState } from "react";
+
+import { useState, useEffect, useRef } from "react";
 
 export default function Home({
   courses,
@@ -16,6 +19,7 @@ export default function Home({
   articles,
   universities,
 }) {
+  const [isDriftLoaded, setIsDriftLoaded] = useState(false);
   return (
     <>
       <CarouselItem />
@@ -66,3 +70,23 @@ export async function getStaticProps() {
     },
   };
 }
+
+// function useInterval(callback, delay) {
+//   const savedCallback = useRef(null);
+
+//   // Remember the latest function.
+//   useEffect(() => {
+//     savedCallback.current = callback;
+//   }, [callback]);
+
+//   // Set up the interval.
+//   useEffect(() => {
+//     function tick() {
+//       savedCallback.current();
+//     }
+//     if (delay !== null) {
+//       let id = setInterval(tick, delay);
+//       return () => clearInterval(id);
+//     }
+//   }, [delay]);
+// }
