@@ -84,13 +84,13 @@ const Course = ({ course }) => {
               Apply for {course.title} at
             </h1>
             <img src="/images/uel-my.png" className="w-80 h-40" />
-            <p className="max-w-2xl mb-6 font-light text-white pl-2 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="max-w-2xl mb-6 font-light text-white pl-2 lg:mb-8 md:text-lg lg:text-xl dark:text-white">
               We are a careers-first university. We prepare our students for the
               jobs of the future and have been doing this proudly for 124 years.
             </p>
             <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
               <a
-                className="inline-flex items-center justify-center px-20 py-3 ml-2 text-sm font-medium text-center text-white border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-800 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+                className="inline-flex items-center justify-center px-20 py-3 ml-2 text-sm font-medium text-center text-white border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-800 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
                 href="#form"
               >
                 👇 Scroll Below to Apply
@@ -108,13 +108,13 @@ const Course = ({ course }) => {
           <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
             <dl class="grid max-w-screen-md gap-8 mx-auto text-white sm:grid-cols-3 dark:text-white">
               <div class="flex flex-col items-center justify-center">
-                <dd class="font-light text-white dark:text-gray-400">Fees</dd>
+                <dd class="font-light text-white dark:text-white">Fees</dd>
                 <dt class="mb-2 text-3xl md:text-4xl font-extrabold">
                   {course.fees}
                 </dt>
               </div>
               <div class="flex flex-col items-center justify-center">
-                <dd class="font-light text-white dark:text-gray-400">
+                <dd class="font-light text-white dark:text-white">
                   Course Starts
                 </dd>
                 <dt class="mb-2 text-3xl md:text-4xl font-extrabold">
@@ -206,7 +206,7 @@ const Course = ({ course }) => {
           />
           <Link
             href={`${course.brochureUrl}?dl=course_brochure.pdf`}
-            className="inline-flex items-center justify-center px-20  text-gray-900 lg:px-6 xl:px-24 text-bold ml-6 py-3 xl:ml-36 lg:text-2xl text-sm lg:font-light text-center  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-20  text-gray-900 lg:px-6 xl:px-24 text-bold ml-6 py-3 xl:ml-36 lg:text-2xl text-sm lg:font-light text-center  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-cyan-900 dark:focus:ring-gray-800"
           >
             Download Brochure
           </Link>
@@ -225,13 +225,13 @@ const Course = ({ course }) => {
 
                   onChange={(e) => setFirstName(e.target.value)}
                   id="floating_first_name"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900  bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white   dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_first_name"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   First name
                 </label>
@@ -243,13 +243,13 @@ const Course = ({ course }) => {
                   // value={floating_last_name}
                   onChange={(e) => setLastName(e.target.value)}
                   id="floating_last_name"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_last_name"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Last name
                 </label>
@@ -264,13 +264,13 @@ const Course = ({ course }) => {
                   onChange={(e) => setPhone(e.target.value)}
                   // value={floating_phone}
                   id="floating_phone"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_phone"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Phone number
                 </label>
@@ -282,13 +282,13 @@ const Course = ({ course }) => {
                   onChange={(e) => setEmail(e.target.value)}
                   // value={floating_email}
                   id="floating_email"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-primary-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-primary-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_email"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-gray-900 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Email address
                 </label>
@@ -302,13 +302,13 @@ const Course = ({ course }) => {
                   onChange={(e) => setCity(e.target.value)}
                   // value={floating_city}
                   id="floating_city"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_city"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   City
                 </label>
@@ -320,13 +320,13 @@ const Course = ({ course }) => {
                   onChange={(e) => setState(e.target.value)}
                   // value={floating_state}
                   id="floating_state"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_state"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   State
                 </label>
@@ -340,13 +340,13 @@ const Course = ({ course }) => {
                   onChange={(e) => setStudentCourse(e.target.value)}
                   // value={floating_course}
                   id="floating_course"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_course"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Which Course are you interested in?
                 </label>
@@ -358,13 +358,13 @@ const Course = ({ course }) => {
                   onChange={(e) => setQualification(e.target.value)}
                   // value={floating_qualification}
                   id="floating_qualification"
-                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm lg:text-xl text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white dark:border-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required=""
                 />
                 <label
                   htmlFor="floating_qualification"
-                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm lg:text-xl text-gray-900 dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   What is your highest qualification?
                 </label>
@@ -373,7 +373,7 @@ const Course = ({ course }) => {
             <button
               type="submit"
               onClick={loadData}
-              className="inline-flex items-center justify-center text-gray-900 w-full px-6 py-3 font-bold lg:text-2xl text-sm lg:font-light text-center  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              className="inline-flex items-center justify-center text-gray-900 w-full px-6 py-3 font-bold lg:text-2xl text-sm lg:font-light text-center  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
             >
               Submit
 
