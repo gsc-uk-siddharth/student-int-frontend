@@ -80,7 +80,7 @@ const Course = ({ course }) => {
         }}
         className="mt-10 pt-10 pb-12"
       >
-        <div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:ml-4 lg:grid-cols-12 lg:pt-28">
+        <div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:ml-4 xl:ml-24 lg:grid-cols-12 lg:pt-28">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl text-white font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">
               Apply for {course.title} at
@@ -213,7 +213,7 @@ const Course = ({ course }) => {
           />
           <Link
             href={`${course.brochureUrl}?dl=course_brochure.pdf`}
-            className="inline-flex items-center justify-center px-20 lg:ml-10 py-3  lg:px-6 xl:px-24 text-bold ml-6  xl:ml-24 lg:text-2xl text-sm lg:font-light text-center bg-cyan-900 text-white  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-cyan-900 dark:focus:ring-gray-800"
+            className="inline-flex items-center justify-center px-20 lg:ml-10 py-3  lg:px-6 xl:px-24 text-bold ml-6  xl:ml-28 lg:text-2xl text-sm lg:font-light text-center bg-cyan-900 text-white  border border-gray-200 rounded-lg sm:w-auto hover:bg-cyan-900 hover:text-white focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-cyan-900 dark:focus:ring-gray-800"
           >
             Download Brochure
           </Link>
